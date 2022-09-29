@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutX="1.0" layoutY="2.0" prefHeight="550.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Usuarios">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="499.0">
+                     <children>
+                        <Accordion layoutX="7.0" layoutY="7.0" prefHeight="506.0" prefWidth="782.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+                          <panes>
+                            <TitledPane animated="false" text="Estudiante">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ButtonBar layoutX="227.0" layoutY="176.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="331.0">
+                                            <buttons>
+                                                <Button mnemonicParsing="false" text="Buscar" />
+                                              <Button mnemonicParsing="false" text="Actualizar" />
+                                                <Button mnemonicParsing="false" text="Borrar" />
+                                                <Button mnemonicParsing="false" text="Crear" />
+                                            </buttons>
+                                          </ButtonBar>
+                                          <GridPane layoutX="110.0" layoutY="24.0" prefHeight="169.0" prefWidth="561.0" AnchorPane.bottomAnchor="247.60000000000002" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="109.20000000000005" AnchorPane.topAnchor="24.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                                   <children>
+                                                      <Label text="ID" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Label text="Nombre" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Label text="Carrera" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Label text="Semestre" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </GridPane>
+                                          <TableView layoutX="70.0" layoutY="235.0" prefHeight="182.0" prefWidth="670.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
+                                            <columns>
+                                              <TableColumn prefWidth="75.0" text="ID" />
+                                              <TableColumn prefWidth="75.0" text="Nombre" />
+                                                <TableColumn prefWidth="75.0" text="Carrera" />
+                                                <TableColumn prefWidth="75.0" text="Semestre" />
+                                                <TableColumn prefWidth="75.0" text="Prestamos" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Monitor">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <GridPane layoutX="106.0" layoutY="14.0" prefHeight="134.0" prefWidth="561.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                                   <children>
+                                                      <Label text="ID" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Label text="Nombre" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Label text="Carrera" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Label text="Semestre" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </GridPane>
+                                          <ButtonBar layoutX="223.0" layoutY="183.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="331.0">
+                                             <buttons>
+                                                <Button mnemonicParsing="false" text="Buscar" />
+                                                <Button mnemonicParsing="false" text="Actualizar" />
+                                                <Button mnemonicParsing="false" text="Borrar" />
+                                                <Button mnemonicParsing="false" text="Crear" />
+                                             </buttons>
+                                          </ButtonBar>
+                                          <TableView layoutX="63.0" layoutY="235.0" prefHeight="182.0" prefWidth="670.0">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="ID" />
+                                                <TableColumn prefWidth="75.0" text="Nombre" />
+                                                <TableColumn prefWidth="75.0" text="Carrera" />
+                                                <TableColumn prefWidth="75.0" text="Semestre" />
+                                                <TableColumn prefWidth="75.0" text="Prestamos" />
+                                                <TableColumn prefWidth="75.0" text="Pago" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <Label layoutX="278.0" layoutY="148.0" text="Meses de trabajo" />
+                                          <TextField alignment="CENTER" layoutX="387.0" layoutY="144.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                              <TitledPane animated="false" text="Profesor">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <GridPane layoutX="112.0" layoutY="21.0" prefHeight="134.0" prefWidth="561.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                                   <children>
+                                                      <Label text="ID" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Label text="Nombre" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Label text="Materia" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Label text="Meses de trabajo" />
+                                                      <TextField alignment="CENTER" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </GridPane>
+                                          <ButtonBar layoutX="218.0" layoutY="179.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="331.0">
+                                             <buttons>
+                                                <Button mnemonicParsing="false" text="Buscar" />
+                                                <Button mnemonicParsing="false" text="Actualizar" />
+                                                <Button mnemonicParsing="false" text="Borrar" />
+                                                <Button mnemonicParsing="false" text="Crear" />
+                                             </buttons>
+                                          </ButtonBar>
+                                          <TableView layoutX="58.0" layoutY="228.0" prefHeight="182.0" prefWidth="670.0">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="ID" />
+                                                <TableColumn prefWidth="75.0" text="Nombre" />
+                                                <TableColumn prefWidth="75.0" text="Materia" />
+                                                <TableColumn prefWidth="75.0" text="Meses de trabajo" />
+                                                <TableColumn prefWidth="75.0" text="Prestamos" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Elementos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="120.0" layoutY="23.0" prefHeight="169.0" prefWidth="561.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                 <children>
+                                    <Label text="Código" />
+                                    <TextField alignment="CENTER" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label text="Nombre" />
+                                    <TextField alignment="CENTER" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Cantidad" />
+                                    <TextField alignment="CENTER" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Precio" />
+                                    <TextField alignment="CENTER" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label text="Ubicación" />
+                                    <ComboBox prefWidth="150.0" promptText="A1" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label text="Tipo" />
+                                    <ComboBox prefWidth="150.0" promptText="Fichas" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                        <TableView layoutX="66.0" layoutY="289.0" prefHeight="182.0" prefWidth="670.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Código" />
+                              <TableColumn prefWidth="75.0" text="Nombre" />
+                              <TableColumn prefWidth="75.0" text="Cantidad" />
+                              <TableColumn prefWidth="75.0" text="Tipo" />
+                              <TableColumn prefWidth="75.0" text="Ubicación" />
+                              <TableColumn prefWidth="75.0" text="Uso" />
+                              <TableColumn prefWidth="75.0" text="Precio" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <ButtonBar layoutX="167.0" layoutY="221.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="468.0">
+                           <buttons>
+                              <Button mnemonicParsing="false" text="Buscar" />
+                              <Button mnemonicParsing="false" text="Actualizar" />
+                              <Button mnemonicParsing="false" text="Borrar" />
+                              <Button mnemonicParsing="false" text="Crear" />
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Dar de baja" />
+                           </buttons>
+                        </ButtonBar>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Préstamos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="120.0" layoutY="40.0" prefHeight="169.0" prefWidth="561.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                 <children>
+                                    <Label text="Código" />
+                                    <TextField alignment="CENTER" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label text="Elemento" />
+                                    <TextField alignment="CENTER" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Cantidad" />
+                                    <TextField alignment="CENTER" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Profesor" />
+                                    <TextField alignment="CENTER" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label text="Estudiante" />
+                                    <TextField alignment="CENTER" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label text="Monitor" />
+                                    <TextField alignment="CENTER" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                        <TableView layoutX="66.0" layoutY="280.0" prefHeight="182.0" prefWidth="670.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Código" />
+                              <TableColumn prefWidth="75.0" text="Elemento" />
+                              <TableColumn prefWidth="75.0" text="Cantidad" />
+                              <TableColumn prefWidth="75.0" text="Profesor" />
+                              <TableColumn prefWidth="75.0" text="Estudiante" />
+                              <TableColumn prefWidth="75.0" text="Monitor" />
+                              <TableColumn prefWidth="75.0" text="Precio" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <ButtonBar layoutX="225.0" layoutY="221.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="331.0">
+                           <buttons>
+                              <Button mnemonicParsing="false" text="Buscar" />
+                              <Button mnemonicParsing="false" text="Actualizar" />
+                              <Button mnemonicParsing="false" text="Borrar" />
+                              <Button mnemonicParsing="false" text="Crear" />
+                           </buttons>
+                        </ButtonBar>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
